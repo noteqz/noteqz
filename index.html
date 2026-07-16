@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteQz — Turn Class 9 &amp; 10 prep into a game you finish</title>
+  <meta name="description" content="NoteQz is a gamified learning app for Class 9 & 10. Bite-sized lessons, adaptive practice, past-year papers, streaks and gems — in English or हिन्दी." />
+  <meta name="theme-color" content="#F8F3EA" />
+
+  <!-- open graph -->
+  <meta property="og:title" content="NoteQz — learn · recall · master" />
+  <meta property="og:description" content="Bite-sized lessons, adaptive practice and past-year papers for Class 9 & 10 — in English or हिन्दी." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/brand/NoteqzIcon.png" />
+
+  <link rel="icon" type="image/png" href="assets/brand/NoteqzIcon.png" />
+  <link rel="apple-touch-icon" href="assets/brand/NoteqzIcon.png" />
+
+  <!-- fonts (external CDN is fine on GitHub Pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- shared gradient def for hand-drawn strokes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="nqgrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#F2610C" />
+        <stop offset="100%" stop-color="#7A45E0" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__row">
+      <a class="nav__logo" href="#top" aria-label="NoteQz home">
+        <img src="assets/brand/NoteqzWordmark.png" alt="NoteQz" />
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#how">How it works</a>
+        <a href="#practice">Practice</a>
+        <a href="#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--primary" href="#get">Get the app</a>
+        <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap">
+      <div class="hero__grid">
+        <div class="hero__copy reveal revealed">
+          <p class="eyebrow">Built for Class 9 &amp; 10</p>
+          <h1>Turn exam prep into a game you actually <span class="ul-swoosh">finish<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 45 4, 120 3, 197 9" /></svg></span>.</h1>
+          <p class="hero__sub">NoteQz teaches Science, Maths &amp; Social Science one bite-sized lesson at a time — then locks it in with adaptive practice, past-year question papers, and streaks worth protecting. In English or <span class="hand" style="font-size:1.25em">हिन्दी</span>.</p>
+
+          <div class="hero__cta">
+            <a class="btn btn--play" href="#get">
+              <svg class="play-ico" viewBox="0 0 24 26" aria-hidden="true">
+                <path d="M2 2.2 L2 23.8 C2 24.7 3 25.2 3.7 24.7 L22 13.8 C22.7 13.4 22.7 12.6 22 12.2 L3.7 1.3 C3 0.8 2 1.3 2 2.2 Z" fill="#fff"/>
+              </svg>
+              <span class="play-txt"><small>Get it on</small><b>Google Play</b></span>
+            </a>
+            <a class="btn btn--ghost" href="#how" id="demoOpen" aria-haspopup="dialog">See how it works</a>
+          </div>
+
+          <div class="hero__stats" aria-label="What you earn">
+            <span class="stat-chip"><span class="ico">🔥</span> Streak <small>keep it alive</small></span>
+            <span class="stat-chip"><span class="ico">💎</span> Gems <small>earn &amp; spend</small></span>
+            <span class="stat-chip"><span class="ico">⚡</span> XP <small>level up</small></span>
+          </div>
+        </div>
+
+        <div class="hero__art reveal revealed" data-d="1">
+          <div class="hero__stack" id="heroPhone">
+            <div class="device">
+              <div class="device__screen car" id="heroCar" data-carousel data-interval="3200">
+                <img class="car__img active" src="assets/home_page_en.webp" alt="NoteQz Home tab — streak, gems, XP and today's goal" width="720" height="1612" fetchpriority="high" />
+                <img class="car__img" src="assets/learn_page_en.webp" alt="NoteQz Learn tab — subject map with chapters" width="720" height="1612" loading="lazy" />
+                <img class="car__img" src="assets/practice_en.webp" alt="NoteQz Practice tab — analysis, due-for-review and six routines" width="720" height="1612" loading="lazy" />
+                <img class="car__img" src="assets/appearance_preferences.webp" alt="NoteQz Settings tab — theme, accent, BG shade, grayscale and language" width="720" height="1612" loading="lazy" />
+              </div>
+            </div>
+            <div class="tabbar" id="heroTabbar" data-tabs-for="heroCar" role="tablist" aria-label="App tabs preview">
+              <button class="active" role="tab" aria-selected="true">Home</button>
+              <button role="tab" aria-selected="false">Learn</button>
+              <button role="tab" aria-selected="false">Practice</button>
+              <button role="tab" aria-selected="false">Settings</button>
+            </div>
+          </div>
+          <div class="float float--a floaty"><span class="big">🔥</span><span>Streak<small>don't break it</small></span></div>
+          <div class="float float--c float--note floaty floaty--3">Level up! ↗</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <div class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <span>Science</span><span>Mathematics</span><span>Social Science</span><span>Past-Year Papers</span><span>English + हिन्दी</span><span>Class 9</span><span>Class 10</span>
+        <span>Science</span><span>Mathematics</span><span>Social Science</span><span>Past-Year Papers</span><span>English + हिन्दी</span><span>Class 9</span><span>Class 10</span>
+      </div>
+    </div>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how">
+      <div class="wrap center">
+        <p class="eyebrow eyebrow--center reveal">learn · recall · master</p>
+        <h2 class="h-sec reveal" data-d="1">Three steps, on repeat</h2>
+        <p class="lead reveal" data-d="2">Every subject follows the same loop — so the habit sticks long before the exam does.</p>
+      </div>
+      <div class="wrap">
+        <div class="htw reveal" id="htw" data-interval="4600">
+          <div class="htw__text">
+            <div class="htw__inner">
+              <div class="htw__num" data-htw-num>01 · LEARN</div>
+              <h3 class="htw__title" data-htw-title>Pick a subject, dive in</h3>
+              <p class="htw__body" data-htw-body>Subjects open into chapters, then bite-sized lessons.</p>
+            </div>
+            <div class="htw__nav" role="tablist" aria-label="Steps">
+              <button class="active" role="tab" aria-selected="true"
+                data-num="01 · LEARN" data-title="Pick a subject, dive in"
+                data-body="Subjects open into chapters, then bite-sized lessons."
+                data-img="assets/step_learn.webp"><b>01</b><span>Learn</span></button>
+              <button role="tab" aria-selected="false"
+                data-num="02 · RECALL" data-title="Practice that adapts"
+                data-body="Spaced review and Weak Spot resurface what you keep missing."
+                data-img="assets/step_practice.webp"><b>02</b><span>Recall</span></button>
+              <button role="tab" aria-selected="false"
+                data-num="03 · MASTER" data-title="Progress you can see"
+                data-body="Per-topic insights score understanding, recall and accuracy."
+                data-img="assets/step_master.webp"><b>03</b><span>Master</span></button>
+            </div>
+          </div>
+          <div class="htw__stage">
+            <div class="htw__bg" data-htw-bg aria-hidden="true" style="background-image:url('assets/step_learn.webp')"></div>
+            <div class="htw__slides">
+              <img class="htw__img active" src="assets/step_learn.webp" alt="The Learn tab — subject map for Class 9 and 10" loading="lazy" />
+              <img class="htw__img" src="assets/step_practice.webp" alt="The Practice tab — due for review and routines" loading="lazy" />
+              <img class="htw__img" src="assets/step_master.webp" alt="Per-topic insights scoring every topic on five axes" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LITTLE THINGS (sliding chip strip) ============ -->
+    <section class="section section--slim" style="background:var(--paper-hi);border-block:1px solid var(--border)">
+      <div class="wrap center">
+        <p class="eyebrow eyebrow--center reveal">And the little things</p>
+      </div>
+      <div class="chipstrip" aria-hidden="true">
+        <div class="chipstrip__track">
+          <span class="chip"><span class="chip__emo">🔥</span>Streaks worth protecting</span>
+          <span class="chip"><img src="assets/svg/indicator-svgrepo-com.svg" alt="" />6-month activity · GitHub-style</span>
+          <span class="chip"><img src="assets/svg/trophy-svgrepo-com.svg" alt="" />Levels to climb</span>
+          <span class="chip"><span class="chip__emo">🎯</span>A daily goal ring</span>
+          <span class="chip"><span class="chip__emo">💎</span>Gems to earn &amp; spend</span>
+          <span class="chip"><img src="assets/svg/coffe-svgrepo-com.svg" alt="" />A 10-question daily habit</span>
+          <span class="chip"><img src="assets/svg/math-svgrepo-com.svg" alt="" />Math that renders beautifully</span>
+          <span class="chip"><img src="assets/svg/group-547-svgrepo-com.svg" alt="" />Made for Class 9 &amp; 10</span>
+          <span class="chip"><span class="chip__emo">🔥</span>Streaks worth protecting</span>
+          <span class="chip"><img src="assets/svg/indicator-svgrepo-com.svg" alt="" />6-month activity · GitHub-style</span>
+          <span class="chip"><img src="assets/svg/trophy-svgrepo-com.svg" alt="" />Levels to climb</span>
+          <span class="chip"><span class="chip__emo">🎯</span>A daily goal ring</span>
+          <span class="chip"><span class="chip__emo">💎</span>Gems to earn &amp; spend</span>
+          <span class="chip"><img src="assets/svg/coffe-svgrepo-com.svg" alt="" />A 10-question daily habit</span>
+          <span class="chip"><img src="assets/svg/math-svgrepo-com.svg" alt="" />Math that renders beautifully</span>
+          <span class="chip"><img src="assets/svg/group-547-svgrepo-com.svg" alt="" />Made for Class 9 &amp; 10</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIDE A LESSON (dark band) ============ -->
+    <section class="section band" id="lessons">
+      <div class="wrap split">
+        <div class="split__copy reveal">
+          <p class="eyebrow">Inside a lesson</p>
+          <h2 class="h-sec">Learning, broken into <span class="grad-text">bites you'll remember</span>.</h2>
+          <p class="lead">NoteQz turns the Class 9 &amp; 10 syllabus into short, visual, topic-by-topic lessons — then quietly drills them back until they stick.</p>
+          <ul class="tick-list">
+            <li><span class="tk">✓</span> Story-style slides with a quick check before you move on</li>
+            <li><span class="tk">✓</span> Doodles, diagrams and math that render beautifully</li>
+            <li><span class="tk">✓</span> Light or dark — the lesson follows your shade</li>
+          </ul>
+        </div>
+        <div class="band__media reveal" data-d="1">
+          <div class="band__frame car" id="lessonCar" data-carousel data-interval="3400">
+            <img class="car__img active" src="assets/record_snap_01.webp" alt="A lesson moment in NoteQz" loading="lazy" />
+            <img class="car__img" src="assets/record_snap_02.webp" alt="A lesson moment in NoteQz" loading="lazy" />
+            <img class="car__img" src="assets/record_snap_03.webp" alt="A lesson moment in NoteQz" loading="lazy" />
+            <img class="car__img" src="assets/record_snap_04.webp" alt="A lesson moment in NoteQz" loading="lazy" />
+          </div>
+          <div class="dots dots--dark" data-dots-for="lessonCar" aria-label="Lesson screenshots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRACTICE MODES ============ -->
+    <section class="section" id="practice" style="background:var(--paper-hi);border-block:1px solid var(--border)">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow eyebrow--center reveal">Six ways to practise</p>
+          <h2 class="h-sec reveal" data-d="1">Not just more questions — <span class="grad-text">the right ones</span></h2>
+          <p class="lead reveal" data-d="2">One tap from the Practice tab. Every mode pulls from the same question bank your lessons are built on.</p>
+        </div>
+        <p class="modes-hint reveal" data-d="2">Tap a mode to see what it does.</p>
+        <div class="modes">
+          <button class="mode reveal" type="button" aria-expanded="false">
+            <span class="mode__head"><span class="mode__ico"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg></span><span class="mode__meta"><span class="mode__tag">10 questions</span><span class="mode__name">Daily Mix</span></span><span class="mode__chev" aria-hidden="true">+</span></span>
+            <span class="mode__reveal"><span class="mode__body">A fresh, balanced set across your subjects — the daily habit that keeps the streak alive.</span></span>
+          </button>
+          <button class="mode reveal" type="button" aria-expanded="false" data-d="1">
+            <span class="mode__head"><span class="mode__ico"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><span class="mode__meta"><span class="mode__tag">Revise</span><span class="mode__name">Quick Recall</span></span><span class="mode__chev" aria-hidden="true">+</span></span>
+            <span class="mode__reveal"><span class="mode__body">Chapter summaries to skim before a test — the fast refresh when you're short on time.</span></span>
+          </button>
+          <button class="mode reveal" type="button" aria-expanded="false" data-d="2">
+            <span class="mode__head"><span class="mode__ico"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/></svg></span><span class="mode__meta"><span class="mode__tag">Explore</span><span class="mode__name">By Lessons</span></span><span class="mode__chev" aria-hidden="true">+</span></span>
+            <span class="mode__reveal"><span class="mode__body">Drill any chapter you've learned, question by question, at your own pace.</span></span>
+          </button>
+          <button class="mode reveal" type="button" aria-expanded="false">
+            <span class="mode__head"><span class="mode__ico"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="mode__meta"><span class="mode__tag">Targeted</span><span class="mode__name">Weak Spot</span></span><span class="mode__chev" aria-hidden="true">+</span></span>
+            <span class="mode__reveal"><span class="mode__body">A self-clearing queue of everything you've gotten wrong — until you get it right.</span></span>
+          </button>
+          <button class="mode reveal" type="button" aria-expanded="false" data-d="1">
+            <span class="mode__head"><span class="mode__ico"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg></span><span class="mode__meta"><span class="mode__tag">Timed</span><span class="mode__name">Exam Sprint</span></span><span class="mode__chev" aria-hidden="true">+</span></span>
+            <span class="mode__reveal"><span class="mode__body">Weighted like the real paper, so you rehearse where the marks actually are.</span></span>
+          </button>
+          <button class="mode reveal" type="button" aria-expanded="false" data-d="2">
+            <span class="mode__head"><span class="mode__ico"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></span><span class="mode__meta"><span class="mode__tag">Past papers</span><span class="mode__name">PYQs</span></span><span class="mode__chev" aria-hidden="true">+</span></span>
+            <span class="mode__reveal"><span class="mode__body">Genuine past-year questions — solve by year or by chapter, exactly as they appeared.</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ANALYSIS / INSIGHTS ============ -->
+    <section class="section">
+      <div class="wrap split split--flip">
+        <div class="an reveal">
+          <div class="an__frame car" id="analysisCar" data-carousel data-interval="3000">
+            <img class="car__img active" src="assets/analysis_1.webp" alt="Analysis card — accuracy and progress by subject group" loading="lazy" />
+            <img class="car__img" src="assets/analysis_breakdown_level2.webp" alt="Analysis drill-down — subjects" loading="lazy" />
+            <img class="car__img" src="assets/analysis_breakdown_level3.webp" alt="Analysis drill-down — sub-subjects" loading="lazy" />
+            <img class="car__img" src="assets/analysis_breakdown_level4.webp" alt="Analysis drill-down — chapters" loading="lazy" />
+            <img class="car__img" src="assets/analysis_breakdown_level5.webp" alt="Analysis drill-down — chapter insights" loading="lazy" />
+          </div>
+          <div class="dots" data-dots-for="analysisCar" aria-label="Analysis levels"></div>
+          <p class="an__cap"><svg class="cap-ico lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg> one card · four levels deep</p>
+        </div>
+        <div class="split__copy reveal" data-d="1">
+          <p class="eyebrow">Your analysis</p>
+          <h2 class="h-sec">See exactly where you stand</h2>
+          <p class="lead">Drill from a subject all the way down to a single chapter and switch between two honest lenses — how <b>accurate</b> you are, and how much you've <b>covered</b>.</p>
+          <ul class="tick-list">
+            <li><span class="tk">✓</span> Accuracy &amp; progress, side by side</li>
+            <li><span class="tk">✓</span> Subject → sub-subject → chapter drill-down</li>
+            <li><span class="tk">✓</span> Due-for-review built from your real answers</li>
+            <li><span class="tk">✓</span> All computed on your device — nothing to sign up for</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MAKE IT YOURS (text only) ============ -->
+    <section class="section section--slim customize" id="customize" style="background:var(--paper-hi);border-block:1px solid var(--border)">
+      <div class="wrap center">
+        <p class="eyebrow eyebrow--center reveal">Make it yours</p>
+        <h2 class="h-sec reveal" data-d="1">Your app, your vibe</h2>
+        <p class="lead reveal" data-d="2">Pick an accent, flip between light and dark, or drain the colour out entirely — NoteQz bends to how you like to study.</p>
+        <ul class="feat-inline reveal" data-d="2">
+          <li><span class="tk">✓</span> Accent colours + light &amp; dark shades</li>
+          <li><span class="tk">✓</span> Grayscale for exam-week focus</li>
+          <li><span class="tk">✓</span> Reading size, sounds &amp; reminders</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="pricing" style="background:var(--paper-hi);border-block:1px solid var(--border)">
+      <div class="wrap center">
+        <p class="eyebrow eyebrow--center reveal">Pricing</p>
+        <h2 class="h-sec reveal" data-d="1">Start free. Go Pro when you're hooked.</h2>
+        <p class="lead reveal" data-d="2">Same knowledge either way — Pro just clears the road: no ads, no gates, unlimited everything.</p>
+      </div>
+      <div class="wrap">
+        <div class="price-grid">
+          <article class="plan reveal">
+            <p class="plan__name">Free</p>
+            <div class="plan__price"><b>₹0</b><span>forever</span></div>
+            <p class="plan__cap">Unlock lessons with gems or a quick ad.</p>
+            <ul class="plan__feats">
+              <li><span class="fk">✓</span> All subjects &amp; chapters</li>
+              <li><span class="fk">✓</span> All 6 practice modes</li>
+              <li><span class="fk">✓</span> XP · levels · streaks</li>
+              <li><span class="fk">✓</span> Lessons via gems / rewarded ads</li>
+              <li><span class="fx muted">✕</span> <span class="muted">Shows ads</span></li>
+            </ul>
+            <a class="btn btn--ghost" href="#get">Get started</a>
+          </article>
+
+          <article class="plan plan--pro reveal" data-d="1">
+            <span class="plan__badge" id="planBadge">Save 17%</span>
+            <p class="plan__name">NoteQz Pro</p>
+            <div class="plan__toggle" role="tablist" aria-label="Billing cycle">
+              <button class="active" data-cycle="yearly" role="tab" aria-selected="true">Yearly</button>
+              <button data-cycle="monthly" role="tab" aria-selected="false">Monthly</button>
+            </div>
+            <div class="plan__price"><b id="planPrice">₹1499</b><span id="planPeriod">/year</span></div>
+            <p class="plan__cap" id="planCap">just ₹125/month · billed yearly</p>
+            <ul class="plan__feats">
+              <li><span class="fk">✓</span> <b>Ad-free</b> experience</li>
+              <li><span class="fk">✓</span> <b>Unlimited</b> lessons &amp; gems</li>
+              <li><span class="fk">✓</span> All 6 practice modes</li>
+              <li><span class="fk">✓</span> Adaptive smart review</li>
+              <li><span class="fk">✓</span> Quick-Recall summaries</li>
+            </ul>
+            <a class="btn btn--primary" href="#get">Go Pro</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section">
+      <div class="wrap faq-head reveal">
+        <div>
+          <p class="eyebrow">Good to know</p>
+          <h2 class="h-sec">Questions, answered</h2>
+        </div>
+        <img class="faq-ico" src="assets/svg/avatar-thinking-3-svgrepo-com.svg" alt="~"/>
+      </div>
+      <div class="wrap">
+        <div class="faq reveal" data-d="1">
+          <details open><summary>Which classes is NoteQz for?</summary><p>NoteQz is built specifically for <b>Class 9 &amp; 10</b> — Science, Mathematics and Social Science, mapped chapter by chapter to the school syllabus.</p></details>
+          <details><summary>Is it really free?</summary><p>Yes. You can learn and practise for free — unlock lessons by earning gems or watching a short rewarded ad. Pro removes the ads and every gate for unlimited access.</p></details>
+          <details><summary>Does it work in Hindi?</summary><p>Fully. Every lesson, question and summary is authored in both English and हिन्दी, and you can switch medium anytime in Settings.</p></details>
+          <details><summary>Do I need to be online?</summary><p>You need a connection to load new lessons and past papers. Your progress, streaks and performance analysis are computed and kept on your own device.</p></details>
+          <details><summary>Can I delete my account and data?</summary><p>Anytime, from inside the app — Settings → Delete account removes your account and associated data. The full detail is in our <a href="privacy.html">Privacy Policy</a>.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section cta-band" id="get">
+      <div class="wrap">
+        <div class="cta-box reveal">
+          <span class="cta-hand">ready when you are</span>
+          <h2>Your streak starts today.</h2>
+          <p>Download NoteQz and turn the next chapter into a win.</p>
+          <a class="btn btn--play" href="https://play.google.com/store/apps/details?id=com.noteqz.app" target="_blank" rel="noopener">
+            <svg class="play-ico" viewBox="0 0 24 26" aria-hidden="true">
+              <path d="M2 2.2 L2 23.8 C2 24.7 3 25.2 3.7 24.7 L22 13.8 C22.7 13.4 22.7 12.6 22 12.2 L3.7 1.3 C3 0.8 2 1.3 2 2.2 Z" fill="currentColor"/>
+            </svg>
+            <span class="play-txt"><small>Get it on</small><b>Google Play</b></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="footer__logos">
+            <img class="appicon" src="assets/brand/NoteqzIcon.png" alt="" />
+            <img src="assets/brand/NoteqzWordmark.png" alt="NoteQz" />
+          </span>
+          <p>A gamified way to master Class 9 &amp; 10 — Science, Maths and Social Science — in English or हिन्दी.</p>
+          <p class="footer__tag">learn · recall · master</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#how"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>How it works</a></li>
+            <li><a href="#practice"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"/><path d="m2.5 21.5 1.4-1.4"/><path d="m20.1 3.9 1.4-1.4"/><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"/><path d="m9.6 14.4 4.8-4.8"/></svg>Practice modes</a></li>
+            <li><a href="#pricing"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>Pricing</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.noteqz.app" target="_blank" rel="noopener"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Download</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="privacy.html"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Privacy Policy</a></li>
+            <li><a href="privacy.html#delete"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Delete account</a></li>
+            <li><a href="mailto:noteqz.support@proton.me"><svg class="lu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Contact support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="yr">2026</span> NoteQz. All rights reserved.</span>
+        <span>Made for Class 9 &amp; 10</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MINI TOUR (desktop dialog; on mobile the hero phone IS the tour) ============ -->
+  <div class="demo" id="demo" role="dialog" aria-modal="true" aria-label="NoteQz mini tour" hidden>
+    <div class="demo__backdrop" data-demo-close></div>
+    <div class="demo__card">
+      <p class="demo__hint">go on, tap around ↓</p>
+      <div class="device demo__device">
+        <button class="demo__close" data-demo-close aria-label="Close tour">✕</button>
+        <div class="device__screen demo__screen" id="demoScreen">
+          <img class="car__img active" src="assets/home_page_en.webp" alt="Home tab" />
+          <img class="car__img" src="assets/learn_page_en.webp" alt="Learn tab" loading="lazy" />
+          <img class="car__img" src="assets/practice_en.webp" alt="Practice tab" loading="lazy" />
+          <img class="car__img" src="assets/appearance_preferences.webp" alt="Settings tab" loading="lazy" />
+          <div class="demo__tabs" id="demoTabs">
+            <button class="active">Home</button>
+            <button>Learn</button>
+            <button>Practice</button>
+            <button>Settings</button>
+          </div>
+          <div class="demo__gate" id="demoGate">
+            <div>
+              <img class="gate-ico" src="assets/brand/NoteqzIcon.png" alt="" />
+              <span class="gate-hand hand">that was the free tour ✦</span>
+              <h3>Like it? The full app is free to start.</h3>
+              <p>Real lessons, streaks and gems are waiting.</p>
+              <a class="btn btn--primary" href="#get" id="demoInstall">Get NoteQz free</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
