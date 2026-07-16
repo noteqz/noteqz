@@ -9,8 +9,6 @@ Bite-sized lessons · smart practice · progress you can actually see
 
 [![Get it on Google Play](https://img.shields.io/badge/▶_Google_Play-Get_the_app-F2610C?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.noteqz.app)
 
-<sub>❃ ⋯ download link goes live once the app is published ⋯ ❃</sub>
-
 </div>
 
 <div align="center">
