@@ -17,7 +17,7 @@ Bite-sized lessons · smart practice · progress you can actually see
 
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌ ✦ ✧ ✦ ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-<img src="assets/home_page_en.png" alt="Home" width="205" />&nbsp;&nbsp;<img src="assets/learn_page_en.png" alt="Learn" width="205" />&nbsp;&nbsp;<img src="assets/practice_en.png" alt="Practice" width="205" />
+<img src="assets/home_page_en.webp" alt="Home" width="205" />&nbsp;&nbsp;<img src="assets/learn_page_en.webp" alt="Learn" width="205" />&nbsp;&nbsp;<img src="assets/practice_en.webp" alt="Practice" width="205" />
 
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌ ✦ ✧ ✦ ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
